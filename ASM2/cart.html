@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Some custom styles to beautify this example */
+        .bs-example {
+            margin: 60px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="">
+        <div class="content">
+            <div class="row border border-2 border-white" style="background-color: rgb(255, 153, 186);">
+                <div class="col-sm-2 mt-3">
+                    <div class="">
+                        <a href="#"
+                            class="hv-button btn rounded-0 border border-2 border-dark text-decoration-none fw-bolder  float-end"
+                            style="width: 95px;font-size: 12px;">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="col-sm-8 my-2 text-center ">
+                    <div>
+
+                        <button type="button" style="color: rgb(0,0,0);" class="btn border-0 fw-bold"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="*Enter code URFAVES at checkout to receive discount. Ends 8am UTC on 17 January 2023. Code can be used multiple times per customer up     to a maximum pre-discount spend of $500 per order. Valid on ASOS Brands only. Can't be used with other promo codes or on gift vouches,        delivery, charges, Premier Delivery or ASOS Marketplace.Country exclusions apply. Selected marked prroducts excluded from promo.">
+                            23% OFF 23% OFF ASOS BRANDS!*
+                            <br>
+                            With code: URFAVES
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-2 my-3">
+                    <div>
+                        <a href="#"
+                            class="hv-button btn rounded-0 border border-2 border-dark fw-bolder text-decoration-none"
+                            style="width: 95px;font-size: 12px;">SHOP NOW</a>
+                    </div>
+                </div>
+
+            </div>
+            </header>
+
+
+            <div class="row">
+                <div class="information text-center"
+                    style="background-color: #cde2f5;letter-spacing: .6px;width: 100%;">
+                    <div class="icon ps-3" style="font-style: normal;">
+                        <p class="" style="width:auto; line-height:1.5em; font-size: 13px;">
+                            <img src="images/info.png" alt="" style="width:16px" class="mx-2"> "Can we tempt you? Spend
+                            another S79.00 to qualify for FREE Standard Delivery to Vietnam"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3" style="background-color: #eee;width: 105%;height:auto;">
+
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5 mt-3 me-3">
+
+                    <div class="row border-0" style="background-color: #fff;height:70px;" data-bs-toggle="modal">
+
+                        <div>
+                            <div class="" style="float:left;">
+                                <h1 style="font-size: 1.15em;font-style: normal;text-transform: uppercase;
+                                letter-spacing: 2.5px;
+                                line-height: 22px;" class="mt-4 fw-bold">MY BAG</h1>
+
+                            </div>
+                            <div>
+                                <p class="mt-4 float-end"
+                                    style="font-size: .88em;    line-height: 20px;letter-spacing: .6px;">
+                                    Items
+                                    are reserved for 60 minutes
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3" style="background-color: #fff;height:auto;">
+                        <div class="toast show rounded-0 border-0 mb-3" style="width: 100%"
+                            ng-repeat="sp in cart track by $index">
+                            <div class="toast-header">
+                                <strong class="me-auto"></strong>
+                                <button type="button" class="btn-close rounded-0 border-0"
+                                    ng-click="delProduct($index)"></button>
+                            </div>
+                            <div class="toast-body ">
+                                <div class="row item ">
+                                    <div class="card  border-0 rounded-0" style="height: 150px;">
+                                        <div class="row">
+                                            <img src="{{sp.img[0]}}" class="img-fluid rounded-start col-sm-4 p-3"
+                                                alt="..." style="width:23%;height: 85%;">
+                                            <div class="col-sm-8">
+                                                <div class="card-body">
+                                                    <span class="card-title fw-bold">{{sp.price |currency}}</span>
+                                                    <p class="card-text "><a href="#"
+                                                            class="text-decoration-none fw-bold text-muted text-black-50"
+                                                            style="font-style: normal;letter-spacing: .3px;font-size: smaller;">{{sp.describe}}</a>
+                                                    </p>
+                                                    <div class="row">
+                                                        <form action="/action_page.php">
+                                                            <div>
+                                                                <span>
+                                                                    {{sp.color}}
+                                                                </span>
+
+                                                                <label for="sel"
+                                                                    class="form-label  border-start border-end ms-3 me-1">
+                                                                    <select class="form-select border-0 rounded-0"
+                                                                        id="sel1" name="sellist1"
+                                                                        style="font-size:smaller">
+                                                                        <option>XS</option>
+                                                                        <option>S</option>
+                                                                        <option>M</option>
+                                                                        <option>L</option>
+                                                                        <option>XL</option>
+                                                                    </select>
+
+                                                                </label>
+                                                               
+                                                                <span style="font-size:smaller;" class="me-2 " >Qty
+                                                                     <span
+                                                                        class="border ms-1">
+                                                                        <span
+                                                                            ng-click="subClick($index)" class="ms-1"> -
+                                                                        </span> {{sp.quantity}}
+                                                                        <span
+                                                                            ng-click="addClick($index)"> +
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <span class="border-start ps-3 fw-bold"style="font-size:smaller; letter-spacing: 1px;">Amount: {{sp.price*sp.quantity| currency}}</span>
+                                                            </div>
+
+                                                            <button type="button"
+                                                                style="font-style: normal;letter-spacing: .3px;font-size: small;"
+                                                                class="btn bi bi-heart border text-muted"> Save for
+                                                                later</button>
+
+                                                        </form>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" border-0 rounded-0 my-3 bg-light" style="height:70px; " data-bs-toggle="modal">
+                            <div class="">
+                                <div class=" float-end mt-4" style="width:40%;height:70px">
+                                    <span style="font-size:12px;font-style: normal;text-transform: uppercase;
+                        letter-spacing: 2.5px;
+                        line-height: 22px;" class="mt-4 me-5 fw-bold ">SUB-TOTAL
+                                    </span>
+
+                                    <span class="fw-bold"
+                                        style="font-size: 12px; line-height: 20px;letter-spacing: .6px;">
+                                        {{sumMoney | currency}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3" style="width:100%;height: auto;">
+
+                            <div class="accordion  accordion-flush border-0 rounded-0" id="accordionExample"
+                                style="width:100%;height: auto;">
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed bg-dark" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+
+                                            <img src="images/party.png" class=" icon_party mt-1 img-fluid " alt="..."
+                                                style="width: 10%;height:50px">
+                                            <div class="">
+                                                <div class="card-body text-white pe-3 border-0 rounded-0 ">
+                                                    <h5 class="card-title fw-bold"
+                                                        style="line-height: 1.5em;text-transform: uppercase;letter-spacing: 2px;font-size:medium;">
+                                                        ASOS PREMIER USA</h5>
+                                                    <p class="card-text" style="letter-spacing: .4px;
+                                                        line-height: 1.5em;font-size:15px">Enjoy unlimited Next-Day
+                                                        Delivery on all orders of $50+ and
+                                                        Express Shipping on all others for a whole years! Ts&Cs apply
+                                                    </p>
+
+
+                                                </div>
+                                            </div>
+
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body" style="background-color: #fff;"
+                                            style="line-height: 1.5em;color: #2d2d2d;">
+                                            <h6 style="font-size: 15px;" class="text-dark">
+                                                Sign up to ASOS Premier USA for unlimited Next-Day Delivery on order Of
+                                                $50+
+                                                (Plus,Express Shipping on all orthers!) for a whole year. Say hello to
+                                                speedy, hassle-free shopping!
+                                            </h6>
+                                            <h5 class="fw-bold">
+                                                ONLY $24.99 FOR 12 MONTHS
+                                            </h5>
+                                            <h6 style="font-size: 15px;" class="text-dark">
+                                                By signing up, you're agreeing to these term <u>terms and
+                                                    conditions.</u><br>
+                                                *Cut-off times and dates, and postcode restrictions apply.
+                                            </h6>
+                                            <a href="#"
+                                                class="add_to_bag nav-link mt-3 fw-bold  border border border-success border-3 text-center"
+                                                style="width:120px;height: 35px;font-size:smaller;letter-spacing: .125em;background: #fff;">ADD
+                                                RO BAG
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class=" border-0 rounded-0 my-3 " style="background-color: #fff;height:70px; ">
+
+                                <div class="">
+                                    <div class="card border-0 rounded-0 mb-3" style="background-color: #fff;">
+                                        <div class="row g-0">
+                                            <img src="images/van.png" class="img-fluid rounded-start col-sm-4 p-3"
+                                                alt="..." style="width:70px;">
+                                            <div class="col-sm-8">
+                                                <div class="card-body ">
+                                                    <h5 class="card-title fw-bold"
+                                                        style="line-height: 1.5em;text-transform: uppercase;letter-spacing: 2px;font-size:medium;">
+                                                        FREE* STANDARD SHIPPING
+                                                    </h5>
+                                                    <p class="card-text" style="letter-spacing: .4px;
+                                                        line-height: 1.5em;font-size:15px">Faster delivery options
+                                                        available to
+                                                        most countries<br>
+                                                        <a href="#" class="card-link text-dark" style="letter-spacing: .4px;
+                                                            line-height: 1.5em;">More
+                                                            info
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="like">
+                                <div>
+                                    <h2 class="your_items border-bottom mt-5" style="font-size: 16px;letter-spacing: 2.5px;
+                                        line-height: 22px;">WONDERING WHERE YOUR ITEMS HAVE GONE?</h2>
+                                    <p class="mt-3" style="font-size: 14px;
+                                        line-height: 24px;
+                                        letter-spacing: .4px;">No worries - you'll find them in your Saved Items</p>
+                                    <a href=""
+                                        class="view_items text-center btn border border-2 rounded-0 fw-bold fw-bolder">VIEW
+                                        ALL SAVED ITEMS</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-sm-3  mt-3 ">
+                    <div class="card  rounded-0 border-0">
+                        <div class="card-header fw-bold"
+                            style=" font-style: normal;text-transform: uppercase; letter-spacing: 2.5px;line-height: 22px;font-size: 17px;">
+                            TOLTAL
+                        </div>
+                        <div class="card-body">
+                            <div class="subtol" style="font-size:15px;">
+                                <span class="card-title fw-bold"style="letter-spacing: 1px;"> Sub-total</span>
+                                <span class="text-muted  float-end"style="letter-spacing: 1px;">{{sumMoney | currency}}</span>
+                                <p class="card-text fw-bold mt-3"style="letter-spacing: 1px;">Shipping<a href=""
+                                        class="float-end bi bi-info-circle-fill"></a></p>
+                                <p class="card-text fw-bold"style="letter-spacing: 1px;">Sales tax<a href=""
+                                        class="float-end bi bi-info-circle-fill"></a></p>
+
+                                <a href="#"
+                                    style="font-style: normal;color: #f8f8f8;width: 100%;box-sizing: border-box;background-color:  #018849;"
+                                    class="text-center mx-auto mt-3 btn fw-bold rounded-0 border-0">
+                                    CHECKOUT
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                        <div class="card-footer text-muted">
+                            <h5 style="    text-transform: uppercase;
+                        font-size: .875em;
+                        font-style: normal;
+                        font-weight: 700;
+                        letter-spacing: 2px;">WE ACCEPT:</h5>
+                            <div class="thanhtoan">
+                                <div class="img me-2" style="width:11%;float:left;">
+                                    <img src="images/visa-png.jpg" alt="">
+
+                                </div>
+                                <div class="img me-2" style="width:11%;float:left;">
+                                    <img src="images/mastercard-png.jpg" alt="">
+
+                                </div>
+                                <div class="img me-2" style="width:11%;float:left;">
+                                    <img src="images/pay-pal-png.jpg" alt="">
+
+                                </div>
+                                <div class="img me-2" style="width:11%;float:left;">
+                                    <img src="images/american-express-png.jpg" alt="">
+
+                                </div>
+                                <div class="img me-2" style="width:11%;float:left;">
+                                    <img src="images/visa-electron-png.jpg" alt="">
+                                </div>
+                            </div>
+                            <p style="font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: .4px;" class="mt-3"><br>Got a discount code? Add it in the next step.</p>
+                        </div>
+
+                    </div>
+                    <div class="shopping">
+                        <a href="#!dsSP" class="text-decoration-none btn rounded-0 mt-3"style="background-color:  #018849;font-style: normal;width: 100%;box-sizing: border-box;height:45px;"><p class="text-uppercase text-center mx-auto btn fw-bold rounded-0 border-0 text-white">Mua thêm sản phẩm</p></a>
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+
+</html>

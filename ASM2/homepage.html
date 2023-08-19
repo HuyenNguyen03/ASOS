@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.css">
+    <script src="bootstrap-5.3.0-alpha1-dist/js/angular.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/angular-route.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/Category.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .dropdown {
+            position: static !important;
+        }
+
+        .dropdown-menu {
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+            margin-top: 0px !important;
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div class="" >
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col">
+                <ul class="nav">
+                    <li class="nav-item  border-start border-end">
+                        <a href="#" class="nav-link text-secondary">Marketplace</a>
+                    </li>
+                    <li class="nav-item border-end">
+                        <a href="#" class="nav-link text-secondary">Help & FAQs</a>
+                    </li>
+                    <li class="nav-item border-end">
+                        <button href="#" class=" btn nav-link" style="width:55px"><img src="images/vn.png" alt="VietNam"
+                                class="img-fluid nav"></button>
+                    </li>
+                </ul>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="header">
+            <div class=" row navbar navbar-expand-lg bg-dark navbar-dark ">
+                <div class="row container-fluid">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-3 collapse navbar-collapse ml-3" id="collapsibleNavbar">
+
+                        <div class="logo">
+                            <a href="#!a" class="navbar-brand pl-5 img-fluid"><img src="images/Asos-logo.png" alt="logo"
+                                    style="width: 75px;height: auto;"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapsibleNavbar">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item  border-start">
+                                <a href="#!dsSP"
+                                    class="nav-link bg-dark rounded-0 text-secondary text-light fw-bold text-uppercase  border-end text-center active"
+                                    style="width:100px;">WOMEN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#"
+                                    class="nav-link  bg-dark rounded-0 text-secondary text-light fw-bold text-uppercase  border-end text-center"
+                                    style="width:100px;">MEN</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <form class="col-sm-5 input-group ml-0 text-center" style="width: 650px; height: 40px;">
+                        <input ng-model="keyword" type="text" class="form-control bg-light" placeholder="Search for items and brands">
+                        <button type="submit" class="btn btn-light bi bi-search"></button>
+                    </form>
+                    <div class="col-sm-2">
+             
+                        <nav class="navbar navbar-expand-sm  navbar-dark">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#"></a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsibleNavbar">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item dropdown ">
+                                            <a class="nav-link  navbar-brand" href="#" role="button"
+                                                data-bs-toggle="dropdown"><img src="images/account.png" alt=""
+                                                    class="img-fluid"></a>
+                                            <ul class="dropdown-menu">
+                                                <ul>
+                                                    <li><a class="dropdown-item" href="#!sign_join"><small>Sign in | Jion</small>
+                                                    </li>
+                                                    <li><a class="dropdown-item bi bi-person-fill" href="join.html"> My
+                                                            Account</a></li>
+                                                    <li><a class="dropdown-item bi bi-border-width" href="#"> My
+                                                            Orders</a></li>
+                                                    <li><a class="dropdown-item" href="#"> <img
+                                                                src="images/return-box.png"
+                                                                style="width: 20px;height: 20px;" alt=""> My Returns</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item bi bi-question-circle" href="#"> Returns
+                                                            Information</a></li>
+                                                    <li><a class="dropdown-item bi bi-chat-left-dots" href="#"> Contact
+                                                            Preferences</a></li>
+                                                </ul>
+
+                                            </ul>
+                                        </li>
+                                        
+                                        <li class="nav-item me-3 mt-0">
+                                            <a class="nav-link " href="#"><img src="images/heart.png" class="img-fluid"
+                                                    alt=""></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <span class="text-white float-end">{{cart.length}}</span>
+                                            <a class="nav-link" href="#!cart">
+                                                <img src="images/shopping-bag.png"class="img-fluid" alt="">
+                                            </a>  
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+
+
+
+    <div class="row " style="background-color: #585858;">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <nav class="navbar navbar-expand-sm">
+                <div class="container-fluid">
+
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <!-- <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                  </li> -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sale
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <!-- <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul> -->
+                                    <div class="offcanvas offcanvas-start dropdown-item" tabindex="-1" id="offcanvas"
+                                        aria-labelledby="offcanvasLabel">
+                                        <div class="offcanvas-header">
+                                            <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+                                            <button type="button" class="btn-close text-reset"
+                                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            Content for the offcanvas goes here.
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    New in
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Lunnar New Year
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Clothing
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dresses
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Shoes
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sportswear
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Accessories
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Toshop
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Face + Body
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Brands
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Outlet
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light" style="font-size: 14px;" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Marketplace
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                        <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <!-- ng-view -->
+    <div ng-view></div>
+     <footer>
+            <div class="row border-top mt-5">
+
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5   ">
+                    <ul class="nav float-end">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><img src="images/facebook.png" alt="" style="width:90%;"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="images/instagram.png" alt="" style="width:90%;">
+                            </a>
+                        </li>
+                        <li class="nav-item border-dark">
+                            <a href="#" class="nav-link"><img src="images/snapchat.png" alt="" style="width:90%;"></a>
+                        </li>
+                        <li class="pt-2  text-black-50">|</li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4 ">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link "><img src="images/visa-png.jpg" alt="" style="width:35px;"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <img src="images/mastercard-png.jpg" alt="" style="width:35px;">
+                            </a>
+                        </li>
+                        <li class="nav-item border-dark">
+                            <a href="#" class="nav-link "><img src="images/pay-pal-png.jpg" alt=""
+                                    style="width:35px;"></a>
+                        </li>
+                        <li class="nav-item border-dark">
+                            <a href="#" class="nav-link "><img src="images/american-express-png.jpg" alt=""
+                                    style="width:35px;"></a>
+                        </li>
+                        <li class="nav-item border-dark">
+                            <a href="#" class="nav-link "><img src="images/visa-electron-png.jpg" alt=""
+                                    style="width:35px;"></a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-sm-2"></div>
+
+            </div>
+            <div class="row mt-3" style="background-color: #E8E8E8;">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-11  mt-3">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <dl style="font-size: 14px;letter-spacing: 1px;">
+                                <dt style="color: #707070;font-size: 16px;" class="fw-bolder mb-3">HELP &INFORMATION
+                                    ASOS</dt>
+                                <dd><a href="#" class=" text-muted text-decoration-none">Help</a></dd>
+                                <dd><a href="#" class="text-muted text-decoration-none">Track order</a></dd>
+                                <dd><a href="#" class=" text-muted text-decoration-none">Delivery & returns</a></dd>
+                                <dd><a href="#" class=" text-muted text-decoration-none">Sitemap</a></dd>
+                            </dl>
+                        </div>
+                        <div class="col-sm-3">
+                            <dl style="font-size: 14px;letter-spacing: 1px;">
+                                <dt style="color: #707070;font-size: 16px;" class="fw-bolder mb-3">ABOUT ASOS
+                                    ASOS</dt>
+                                <dd><a href="#" class=" text-muted text-decoration-none">About us</a></dd>
+                                <dd><a href="#" class="text-muted text-decoration-none">Careers at ASOS</a></dd>
+                                <dd><a href="#" class=" text-muted text-decoration-none">Corporate responsibility</a>
+                                </dd>
+                                <dd><a href="#" class=" text-muted text-decoration-none">Investors' site</a></dd>
+
+                            </dl>
+                        </div>
+                        <div class="col-sm-3">
+                            <dl style="font-size: 14px;letter-spacing: 1px;">
+                                <dt style="color: #707070;font-size: 16px;" class="fw-bolder mb-3">MORE FROM
+                                    ASOS</dt>
+                                <dd><a href="#" class=" text-muted text-decoration-none">Mobile and ASOS apps</a></dd>
+                                <dd><a href="#" class="text-muted text-decoration-none">ASOS Marketplace</a></dd>
+                                <dd><a href="#" class=" text-muted text-decoration-none">Gift vouchers</a></dd>
+                                <dd><a href="#" class=" text-muted text-decoration-none">Black Friday</a></dd>
+                                <dd><a href="#" class=" text-muted text-decoration-none">ASOS x Thrift+</a></dd>
+                            </dl>
+                        </div>
+                        <div class="col-sm-3">
+                            <dl style="font-size: 14px;letter-spacing: 1px;">
+                                <dt style="color: #707070;font-size: 16px;" class="fw-bolder mb-3">SHOPPING FROM</dt>
+                                <dd> <button class="btn nav-link">
+                                        <a href="#" class="text-decoration-none text-muted">
+                                            <span>You're in</span>
+                                            <img src="images/vn.png" alt="VietNam" style="width: 14px;">|
+                                            <span class="fw-bolder">CHANGE</span>
+                                        </a>
+                                    </button>
+                                </dd>
+
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row" style="background-color:#D3D3D3;">
+                    <div class="col mt-2 ms-5">
+                        <p style="font-size: 10px;line-height :30px;"> <img src="images/heartred.png" alt=""
+                                style="width:15px;" class=""> 2023 ASOS</p>
+                    </div>
+                    <div class="col"> </div>
+                    <div class="col">
+                        <div>
+                            <ul class="nav">
+                                <li class="nav-item border-end">
+                                    <a href="#" class="nav-link text-muted "
+                                        style="font-size: .65rem;line-height :30px;">Privacy 7
+                                        Cookies </a>
+
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="#" class="nav-link text-muted border-end "
+                                        style="font-size: .65rem;line-height :30px;">Ts&Cs </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="#" class="nav-link text-muted"
+                                        style="font-size: .65rem;line-height: 30px;">Accessibility </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/angular.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/angular-route.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/Category.js"></script>
+</body>
+
+</html>

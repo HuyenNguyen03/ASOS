@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+    <div class="" style="background-color: #eee;">
+        <div class="row mt-5">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 " style="background-color: #FFF;">
+                <div class="logo_image text-center">
+                    <a href="homepage.html"><img src="images/logoDen.jpg " alt="logo" style="width: 100px;"></a>
+                </div>
+                <div class=" main_signin mt-3 " style="font-family: futura-pt,Tahoma,Geneva,Verdana,Arial,sans-serif;background-color: #eee;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: .4px;
+                ">
+                    <ul class="row nav nav-pills border-bottom rounded-0 " style="background-color: #FFF;">
+                        <li class="col nav-item rounded-0 ">
+                            <a class=" nav-link text-center text-muted border-end fw-bold rounded-0"
+                                style="background-color: #FFF;text-transform: uppercase;letter-spacing: 2px;line-height: 1.7;"
+                                data-bs-toggle="pill" href="#home">JOIN</a>
+                        </li>
+                        <li class="col nav-item rounded-0">
+                            <a class="nav-link active text-center text-muted  fw-bold rounded-0"
+                                style="background-color: #FFF;text-transform: uppercase;letter-spacing: 2px;line-height: 1.7;"
+                                data-bs-toggle="pill" href="#menu1">SIGN IN</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content " style="background-color: #FFF;">
+                        <div class="tab-pane container" id="home">
+                            <div class="row sign_in float-center my-4 mx-3">
+                                <h5 class="my-3 fw-bold"
+                                    style="font-style: normal;font-weight: 700;font-size: 18px;line-height: 1.2;letter-spacing: 2.5px;text-transform: uppercase;text-align: center;">
+                                    SIGN UP WITH ...</h5>
+                                <div class="col">
+                                    <a href="#" class=" btn  fw-bold border border-1 rounded-0"
+                                        style="height:50px; width: 200px;"><img src="images/google.png" class="me-3"style="height:20px;width: 20px;"
+                                            alt="">GOOGLE</a>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class=" btn border border-1 rounded-0 fw-bold"
+                                        style="height:50px; width: 200px;"><img src="images/apple-logo.png" class="me-3"style="height:20px;width: 20px;"
+                                            alt="">APPLE</a>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class=" btn fw-bold border border-1 rounded-0 float-end fw-bold"
+                                        style="height:50px; width: 200px;"><img src="images/facebook (1).png"
+                                            class="me-3"style="height:20px;width: 20px;" alt="">FACEBOOK</a>
+                                </div>
+                                <p class="text-center mt-3"
+                                    style="    font-style: normal;font-weight: 400;font-size: 14px;line-height: 1.5;letter-spacing: .4px;">
+                                    Singing up with social is super quick. No extra passwwords to remember - no brain
+                                    fail.<br>
+                                    Dont worry, we'd never share any for your data por post anything on your behalf
+                                    #notevil
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-center fw-bold"style="letter-spacing: 2.3px;">OR SIGN UP WITH EMAIL</h5>
+                                    <form action="" class="was-validated" name="frmSign">
+                                        <div class="mb-3 mt-3">
+                                            <label for="uname" class="form-label text-muted fw-bold text-black-50" style="font-style: normal;font-size:15px;text-transform: uppercase;">EMAIL ADDRESS:</label>
+                                            <input ng-model="email" type="email" class="form-control rounded-0" id="email_address"style="height:50px;"
+                                                placeholder="Enter username" name="txtemail_address" required>
+                                            
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                            <div style="padding-top: 6px;color: #767676;font-size: 12px;line-height: 1.7;letter-spacing: .4px;">We'll send your order confirmation here</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="pwd" class="form-label text-muted fw-bold text-black-50" style="font-style: normal;font-size:15px;text-transform: uppercase;">FIRST NAME:</label>
+                                            <input type="password" class="form-control rounded-0" id="first_name"style="height:50px;"
+                                                placeholder="Enter password" name="first_name" required>
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="pwd" class="form-label text-muted fw-bold text-black-50" style="font-style: normal;font-size:15px;text-transform: uppercase;">LAST NAME:</label>
+                                            <input type="password" class="form-control rounded-0" id="last_name"style="height:50px;"
+                                                placeholder="Enter password" name="last_name" required>
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="pwd" class="form-label text-muted fw-bold text-black-50" style="font-style: normal;font-size:15px;text-transform: uppercase;">PASSWORD:</label>
+                                            <input type="password" class="form-control rounded-0" id="pwd"style="height:50px;"
+                                                placeholder="Enter password" name="pswd" required>
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                            <div style="padding-top: 6px;color: #767676;font-size: 12px;line-height: 1.7;letter-spacing: .4px;">Must be 10 or more charaters</div>
+                                        </div>
+                                        <div class="date ">
+                                            <label for="date_birth" class="form-label text-muted fw-bold text-black-50" style="font-style: normal;font-size:15px;text-transform: uppercase;">DATE OF BIRTH:</label>
+                                            <div class="">
+                                                <label class="mb-3">
+                                                    <select class="form-select w-30 rounded-0"
+                                                        style="width:105px;height:50px;" required
+                                                        aria-label="select example">
+                                                        <option value="">DD</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="3">4</option>
+                                                        <option value="3">5</option>
+                                                        <option value="3">6</option>
+                                                        
+                                                    </select>
+
+                                                </label>
+                                                <label style="margin-left: 35px;">
+                                                    <select class="form-select rounded-0"
+                                                        style="width:170px;height:50px;" required
+                                                        aria-label="select example">
+                                                        <option value="">Month</option>
+                                                        <option value="1">January</option>
+                                                        <option value="2">February</option>
+                                                        <option value="3">March</option>
+                                                    </select>
+
+
+                                                </label>
+                                                <label class="float-end">
+                                                    <select class="form-select rounded-0"
+                                                        style="width:119px;height:50px;" required
+                                                        aria-label="select example">
+                                                        <option value="">YYYY</option>
+                                                        <option value="1">2003</option>
+                                                        <option value="2">2001</option>
+                                                        <option value="3">2019</option>
+                                                    </select>
+
+
+                                                </label>
+                                            </div>
+                                            <p style="padding-top: 6px;color: #767676;font-size: 12px;line-height: 1.7;letter-spacing: .4px;">You need to be 16 or over to use ASOS</p>
+                                            <div class="radio_check mt-5">
+                                                <label for="pwd" class="form-label text-muted fw-bold text-black-50" style="font-style: normal;font-size:15px;text-transform: uppercase;">MOSTLY INTERESTED IN:</label>
+
+                                                <div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="inlineRadioOptions" id="inlineRadio1"
+                                                            value="option1" />
+                                                        <label class="form-check-label" for="inlineRadio1"style="font-style: normal;font-weight: 400;letter-spacing: .4px;font-size:13px">
+                                                            Womenswear</label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="inlineRadioOptions" id="inlineRadio2"
+                                                            value="option2" />
+                                                        <label class="form-check-label"
+                                                            for="inlineRadio2"style="font-style: normal;font-weight: 400;letter-spacing: .4px;font-size:13px">Menswear</label>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="contact mt-5 mb-5">
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h6 class="fw-bold">CONTACT PREFERENCES</h6>
+                                                        <h6 style="font-style: normal;color: #2d2d2d;font-size: 13px;line-height: 30px;display: inline-block;">Tell us which emails you's like.</h6>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="" class="btn bg-light  rounded-0 float-end"style="font-size: 14px;background-color: #eee;box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);text-transform: uppercase;font-weight: 600;padding: 6px;letter-spacing: .6px;min-width: 112px;">
+                                                            SELECT ALL</a>
+                                                    </div>
+                                                </div>
+                                                    <div class="checkbox">
+                                                        <div class="">
+                                                            <label class="form-check-label fw-bold" for="flexCheckDefault" style="line-height: 21px;letter-spacing: .6px;color: #2d2d2d;font-family: futura-pt;padding-top: 3px; font-size: 15px;">
+                                                                Discounts and sales
+                                                            </label>
+                                                            <input class="form-check-input  float-end"style="height: 22px;width: 22px;"type="checkbox"
+                                                                id="checkboxNoLabel" value="" aria-label="..." />
+                                                        </div>
+
+                                                        <div class="mt-1">
+                                                            <label class="form-check-label fw-bold" style="line-height: 21px;letter-spacing: .6px;color: #2d2d2d;font-family: futura-pt;padding-top: 3px;font-size: 15px;" for="flexCheckDefault">
+                                                                New stuff
+                                                            </label>
+                                                            <input class="form-check-input  float-end"style="height: 22px;width: 22px;"  type="checkbox"
+                                                                id="checkboxNoLabel2" value="" aria-label="..." />
+                                                        </div>
+                                                        <div class="mt-1">
+                                                            <label class="form-check-label fw-bold" style="line-height: 21px;letter-spacing: .6px;color: #2d2d2d;font-family: futura-pt;padding-top: 3px;font-size: 15px;" for="flexCheckDefault">
+                                                                Your exclusives
+                                                            </label>
+                                                            <input class="form-check-input  float-end"style="height: 22px;width: 22px;"  type="checkbox"
+                                                                id="checkboxNoLabel" value="" aria-label="..." />
+                                                        </div>
+
+                                                        <div class="mt-1">
+                                                            <label class="form-check-label fw-bold"style="line-height: 21px;letter-spacing: .6px;color: #2d2d2d;font-family: futura-pt;padding-top: 3px;font-size: 15px;" for="flexCheckDefault">
+                                                                ASOS partners
+                                                            </label>
+                                                            <input class="form-check-input  float-end"style="height: 22px;width: 22px;" type="checkbox"
+                                                                id="checkboxNoLabel2" value="" aria-label="..." />
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <button type="submit"class="btn w-100  fw-bold rounded-0"style="background: #a29a9a;color:#fff;height: 50px;font-size: 16px;line-height: 1.5;letter-spacing: 2px;">
+                                                JOIN ASOS
+                                            </button>
+                                    </form>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                        <div class="row tab-pane container active fade show " id="menu1">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10 mx-auto">
+                                <div class="row">
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-sm-10">
+                                        <form action="" class="was-validated">
+                                            <div class="mb-3 mt-3">
+                                                <label for="uname" class="form-label text-muted fw-bold text-black-50"
+                                                    style="font-style: normal;font-size:15px;text-transform: uppercase;">EMAIL
+                                                    ADDRESS</label>
+                                                <input type="text" class="form-control rounded-0 mt-1" id="uname"
+                                                    style="height:50px;" placeholder="Enter username" name="uname"
+                                                    required>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="pwd" class="form-label text-muted fw-bold text-black-50"
+                                                    style="font-style: normal;font-size:15px;text-transform: uppercase;">PASSWORD</label>
+                                                <input type="password" class="form-control rounded-0 mt-1" id="pwd"
+                                                    style="height:50px;" placeholder="Enter password" name="pswd"
+                                                    required>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                            </div>
+                                            <button type="submit"
+                                                class="btn btn-primary w-100 bg-dark text-white rounded-0 fw-bold"
+                                                style="height:50px;letter-spacing: 2px;font-style: normal;line-height: 1.5;">SIGN
+                                                IN</button>
+                                            <div class="forgot">
+                                                <a href="#" class=" text-decoration-none float-center pt-3 text-muted "
+                                                    style="margin-left: 170px;font-style: normal;font-size: 14px;line-height: 1.5;letter-spacing: .6px;">Forgot
+                                                    passwword?</a>
+
+                                            </div>
+                                            <div class="row sign_in float-center">
+                                                <h5 class="my-3"
+                                                    style="font-style: normal;font-weight: 700;font-size: 18px;line-height: 1.2;letter-spacing: 2.5px;text-transform: uppercase;text-align: center;">
+                                                    OR SIGN IN WITH ...</h5>
+                                                <div class="col">
+                                                    <a href="#" class=" btn border border-1 rounded-0"
+                                                        style="height:50px;font-size: medium;"><img src="images/google.png" class="me-3"style="height:20px;width: 20px;"
+                                                            alt="">GOOGLE</a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" class=" btn border border-1 rounded-0"
+                                                        style="height:50px;font-size: medium;"><img src="images/apple-logo.png"style="height:20px;width: 20px;"
+                                                            class="me-3" alt="">APPLE</a>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="#" class=" btn border border-1 rounded-0 float-end"
+                                                        style="height:50px;font-size: medium;"><img src="images/facebook (1).png"style="height:20px;width: 20px;"
+                                                            class="me-3" alt="">FACEBOOK</a>
+                                                </div>
+
+
+
+                                                <a href="#" class="text-center text-decoration-none mt-3 text-muted"
+                                                    style="font-style: normal;font-size: 16px; line-height: 1.5;letter-spacing: .4px;">Where
+                                                    has Twitter Gone?</a>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                    <div class="col-sm-1 "></div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-1"></div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row mt-5" style="font-size: 14px;">
+            <div class="text-center">
+                <a href="#" class="text-decoration-none text-muted"><u class="border-end-2 ">Privacy Policy</u> |</a>
+                <a href="#" class="text-decoration-none text-muted"><u> Terms and Conđitions</u></a>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/angular.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/angular-route.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
